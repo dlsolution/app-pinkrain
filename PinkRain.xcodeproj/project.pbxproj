@@ -1,0 +1,802 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0427158024AB3464000EA42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427157F24AB3464000EA42A /* AppDelegate.swift */; };
+		0427158224AB3464000EA42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427158124AB3464000EA42A /* SceneDelegate.swift */; };
+		0427158924AB3467000EA42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0427158824AB3467000EA42A /* Assets.xcassets */; };
+		0427158C24AB3467000EA42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0427158A24AB3467000EA42A /* LaunchScreen.storyboard */; };
+		0427159724AB3467000EA42A /* PinkRainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427159624AB3467000EA42A /* PinkRainTests.swift */; };
+		042715A324AB34B1000EA42A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042715A124AB34B1000EA42A /* HomeViewController.swift */; };
+		042715A424AB34B1000EA42A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042715A224AB34B1000EA42A /* HomeViewController.xib */; };
+		5A85D8AC88A6985D9AA35A41 /* Pods_PinkRainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB80C1F3B1A6E360ECAD5929 /* Pods_PinkRainTests.framework */; };
+		6DBB0003B7C5BE849D59539C /* Pods_PinkRain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6243FFB441C310A3028F4D3 /* Pods_PinkRain.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0427159324AB3467000EA42A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0427157424AB3464000EA42A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0427157B24AB3464000EA42A;
+			remoteInfo = PinkRain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0427157C24AB3464000EA42A /* PinkRain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkRain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0427157F24AB3464000EA42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0427158124AB3464000EA42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0427158824AB3467000EA42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0427158B24AB3467000EA42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0427158D24AB3467000EA42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0427159224AB3467000EA42A /* PinkRainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinkRainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0427159624AB3467000EA42A /* PinkRainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkRainTests.swift; sourceTree = "<group>"; };
+		0427159824AB3467000EA42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042715A124AB34B1000EA42A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		042715A224AB34B1000EA42A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		042715A924AB3686000EA42A /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		042715AA24AB3691000EA42A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		042715AB24AB369E000EA42A /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		044D17FE24BF18080016146C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		044D180024BF18080016146C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		044D180224BF18080016146C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04D352D524AEC86200521DB6 /* PinkRainDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PinkRainDebug.entitlements; sourceTree = "<group>"; };
+		04D352D624AEC88B00521DB6 /* PinkRainStaging.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PinkRainStaging.entitlements; sourceTree = "<group>"; };
+		04D352D724AEC89200521DB6 /* PinkRainRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PinkRainRelease.entitlements; sourceTree = "<group>"; };
+		30962EB40FAE1261704C5BCA /* Pods-PinkRainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkRainTests.release.xcconfig"; path = "Target Support Files/Pods-PinkRainTests/Pods-PinkRainTests.release.xcconfig"; sourceTree = "<group>"; };
+		85C01CD83D95E95A41FA091F /* Pods-PinkRainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkRainTests.debug.xcconfig"; path = "Target Support Files/Pods-PinkRainTests/Pods-PinkRainTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD17DCCE922817A55CA561A4 /* Pods-PinkRain.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkRain.staging.xcconfig"; path = "Target Support Files/Pods-PinkRain/Pods-PinkRain.staging.xcconfig"; sourceTree = "<group>"; };
+		B358DD715951FB1C3E44F349 /* Pods-PinkRain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkRain.debug.xcconfig"; path = "Target Support Files/Pods-PinkRain/Pods-PinkRain.debug.xcconfig"; sourceTree = "<group>"; };
+		B5639D95E91E7E199775094F /* Pods-PinkRain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkRain.release.xcconfig"; path = "Target Support Files/Pods-PinkRain/Pods-PinkRain.release.xcconfig"; sourceTree = "<group>"; };
+		D148FC679984D1649C898EB7 /* Pods-PinkRainTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkRainTests.staging.xcconfig"; path = "Target Support Files/Pods-PinkRainTests/Pods-PinkRainTests.staging.xcconfig"; sourceTree = "<group>"; };
+		E6243FFB441C310A3028F4D3 /* Pods_PinkRain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkRain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB80C1F3B1A6E360ECAD5929 /* Pods_PinkRainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkRainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0427157924AB3464000EA42A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DBB0003B7C5BE849D59539C /* Pods_PinkRain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0427158F24AB3467000EA42A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A85D8AC88A6985D9AA35A41 /* Pods_PinkRainTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0427157324AB3464000EA42A = {
+			isa = PBXGroup;
+			children = (
+				0427157E24AB3464000EA42A /* PinkRain */,
+				0427159524AB3467000EA42A /* PinkRainTests */,
+				0427157D24AB3464000EA42A /* Products */,
+				231DB9D549ACCEBCC15547FE /* Pods */,
+				64C5D13547CAD5F9D2BE0BD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0427157D24AB3464000EA42A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0427157C24AB3464000EA42A /* PinkRain.app */,
+				0427159224AB3467000EA42A /* PinkRainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0427157E24AB3464000EA42A /* PinkRain */ = {
+			isa = PBXGroup;
+			children = (
+				04D352D724AEC89200521DB6 /* PinkRainRelease.entitlements */,
+				04D352D624AEC88B00521DB6 /* PinkRainStaging.entitlements */,
+				04D352D524AEC86200521DB6 /* PinkRainDebug.entitlements */,
+				044D17FC24BF18080016146C /* Firebase */,
+				042715A824AB366E000EA42A /* Config */,
+				0427157F24AB3464000EA42A /* AppDelegate.swift */,
+				0427158124AB3464000EA42A /* SceneDelegate.swift */,
+				0427158824AB3467000EA42A /* Assets.xcassets */,
+				0427158A24AB3467000EA42A /* LaunchScreen.storyboard */,
+				0427158D24AB3467000EA42A /* Info.plist */,
+				042715A124AB34B1000EA42A /* HomeViewController.swift */,
+				042715A224AB34B1000EA42A /* HomeViewController.xib */,
+			);
+			path = PinkRain;
+			sourceTree = "<group>";
+		};
+		0427159524AB3467000EA42A /* PinkRainTests */ = {
+			isa = PBXGroup;
+			children = (
+				0427159624AB3467000EA42A /* PinkRainTests.swift */,
+				0427159824AB3467000EA42A /* Info.plist */,
+			);
+			path = PinkRainTests;
+			sourceTree = "<group>";
+		};
+		042715A824AB366E000EA42A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				042715A924AB3686000EA42A /* Debug.xcconfig */,
+				042715AB24AB369E000EA42A /* Staging.xcconfig */,
+				042715AA24AB3691000EA42A /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		044D17FC24BF18080016146C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				044D17FD24BF18080016146C /* Prod */,
+				044D17FF24BF18080016146C /* Adhoc */,
+				044D180124BF18080016146C /* Dev */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		044D17FD24BF18080016146C /* Prod */ = {
+			isa = PBXGroup;
+			children = (
+				044D17FE24BF18080016146C /* GoogleService-Info.plist */,
+			);
+			path = Prod;
+			sourceTree = "<group>";
+		};
+		044D17FF24BF18080016146C /* Adhoc */ = {
+			isa = PBXGroup;
+			children = (
+				044D180024BF18080016146C /* GoogleService-Info.plist */,
+			);
+			path = Adhoc;
+			sourceTree = "<group>";
+		};
+		044D180124BF18080016146C /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				044D180224BF18080016146C /* GoogleService-Info.plist */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
+		231DB9D549ACCEBCC15547FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B358DD715951FB1C3E44F349 /* Pods-PinkRain.debug.xcconfig */,
+				AD17DCCE922817A55CA561A4 /* Pods-PinkRain.staging.xcconfig */,
+				B5639D95E91E7E199775094F /* Pods-PinkRain.release.xcconfig */,
+				85C01CD83D95E95A41FA091F /* Pods-PinkRainTests.debug.xcconfig */,
+				D148FC679984D1649C898EB7 /* Pods-PinkRainTests.staging.xcconfig */,
+				30962EB40FAE1261704C5BCA /* Pods-PinkRainTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		64C5D13547CAD5F9D2BE0BD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6243FFB441C310A3028F4D3 /* Pods_PinkRain.framework */,
+				FB80C1F3B1A6E360ECAD5929 /* Pods_PinkRainTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0427157B24AB3464000EA42A /* PinkRain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0427159B24AB3467000EA42A /* Build configuration list for PBXNativeTarget "PinkRain" */;
+			buildPhases = (
+				0591D1C6275EDD7E87BFC413 /* [CP] Check Pods Manifest.lock */,
+				0427157824AB3464000EA42A /* Sources */,
+				0427157924AB3464000EA42A /* Frameworks */,
+				0427157A24AB3464000EA42A /* Resources */,
+				2C85FC43675774E4CBE59EAA /* [CP] Embed Pods Frameworks */,
+				044D180624BF18940016146C /* Setup Firebase plist files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinkRain;
+			productName = PinkRain;
+			productReference = 0427157C24AB3464000EA42A /* PinkRain.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0427159124AB3467000EA42A /* PinkRainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0427159E24AB3467000EA42A /* Build configuration list for PBXNativeTarget "PinkRainTests" */;
+			buildPhases = (
+				3FC3BBC47F02234FB062490F /* [CP] Check Pods Manifest.lock */,
+				0427158E24AB3467000EA42A /* Sources */,
+				0427158F24AB3467000EA42A /* Frameworks */,
+				0427159024AB3467000EA42A /* Resources */,
+				5428C894028929AB9E8BE208 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0427159424AB3467000EA42A /* PBXTargetDependency */,
+			);
+			name = PinkRainTests;
+			productName = PinkRainTests;
+			productReference = 0427159224AB3467000EA42A /* PinkRainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0427157424AB3464000EA42A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = dlsolution;
+				TargetAttributes = {
+					0427157B24AB3464000EA42A = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					0427159124AB3467000EA42A = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 0427157B24AB3464000EA42A;
+					};
+				};
+			};
+			buildConfigurationList = 0427157724AB3464000EA42A /* Build configuration list for PBXProject "PinkRain" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0427157324AB3464000EA42A;
+			productRefGroup = 0427157D24AB3464000EA42A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0427157B24AB3464000EA42A /* PinkRain */,
+				0427159124AB3467000EA42A /* PinkRainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0427157A24AB3464000EA42A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0427158C24AB3467000EA42A /* LaunchScreen.storyboard in Resources */,
+				0427158924AB3467000EA42A /* Assets.xcassets in Resources */,
+				042715A424AB34B1000EA42A /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0427159024AB3467000EA42A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		044D180624BF18940016146C /* Setup Firebase plist files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Firebase plist files";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource to copy\nINFO_PLIST_FILE=GoogleService-Info.plist\n \n# Get references to debug and release versions of the plist file\nDEBUG_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${INFO_PLIST_FILE}\n\nADHOC_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Adhoc/${INFO_PLIST_FILE}\n\nRELEASE_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Prod/${INFO_PLIST_FILE}\n \n# Make sure the debug version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${DEBUG_INFO_PLIST_FILE}\"\nif [ ! -f $DEBUG_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (debug) not found.\"\n    exit 1\nfi\n\n# Make sure the adhoc version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${ADHOC_INFO_PLIST_FILE}\"\nif [ ! -f $ADHOC_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (adhoc) not found.\"\n    exit 1\nfi\n \n# Make sure the release version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${RELEASE_INFO_PLIST_FILE}\"\nif [ ! -f $RELEASE_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (release) not found.\"\n    exit 1\nfi\n \n# Get a reference to the destination location for the plist file\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Copying ${INFO_PLIST_FILE} to final destination: ${PLIST_DESTINATION}\"\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n    echo \"File ${DEBUG_INFO_PLIST_FILE} copied\"\n    cp \"${DEBUG_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"Staging\" ]; then\n    echo \"File ${ADHOC_INFO_PLIST_FILE} copied\"\n    cp \"${ADHOC_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"Release\" ]; then\n    echo \"File ${RELEASE_INFO_PLIST_FILE} copied\"\n    cp \"${RELEASE_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"NOTHING\"\nfi\n";
+		};
+		0591D1C6275EDD7E87BFC413 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinkRain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C85FC43675774E4CBE59EAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinkRain/Pods-PinkRain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinkRain/Pods-PinkRain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PinkRain/Pods-PinkRain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FC3BBC47F02234FB062490F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinkRainTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5428C894028929AB9E8BE208 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinkRainTests/Pods-PinkRainTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinkRainTests/Pods-PinkRainTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PinkRainTests/Pods-PinkRainTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0427157824AB3464000EA42A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0427158024AB3464000EA42A /* AppDelegate.swift in Sources */,
+				0427158224AB3464000EA42A /* SceneDelegate.swift in Sources */,
+				042715A324AB34B1000EA42A /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0427158E24AB3467000EA42A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0427159724AB3467000EA42A /* PinkRainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0427159424AB3467000EA42A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0427157B24AB3464000EA42A /* PinkRain */;
+			targetProxy = 0427159324AB3467000EA42A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0427158A24AB3467000EA42A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0427158B24AB3467000EA42A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0427159924AB3467000EA42A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042715A924AB3686000EA42A /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0427159A24AB3467000EA42A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042715AA24AB3691000EA42A /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0427159C24AB3467000EA42A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B358DD715951FB1C3E44F349 /* Pods-PinkRain.debug.xcconfig */;
+			buildSettings = {
+				APP_BUNDLE_ID = "$(APP_BUNDLE_ID)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				CODE_SIGN_ENTITLEMENTS = PinkRain/PinkRainDebug.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 5M2VJSXFXX;
+				INFOPLIST_FILE = PinkRain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.dlsolution.dev.pinkrain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development vn.dlsolution.dev.pinkrain";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		0427159D24AB3467000EA42A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5639D95E91E7E199775094F /* Pods-PinkRain.release.xcconfig */;
+			buildSettings = {
+				APP_BUNDLE_ID = "$(APP_BUNDLE_ID)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				CODE_SIGN_ENTITLEMENTS = PinkRain/PinkRainRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 5M2VJSXFXX;
+				INFOPLIST_FILE = PinkRain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.dlsolution.pinkrain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore vn.dlsolution.pinkrain";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		0427159F24AB3467000EA42A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C01CD83D95E95A41FA091F /* Pods-PinkRainTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PinkRainTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.dlsolution.PinkRainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinkRain.app/PinkRain";
+			};
+			name = Debug;
+		};
+		042715A024AB3467000EA42A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30962EB40FAE1261704C5BCA /* Pods-PinkRainTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PinkRainTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.dlsolution.PinkRainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinkRain.app/PinkRain";
+			};
+			name = Release;
+		};
+		042715A524AB3574000EA42A /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042715AB24AB369E000EA42A /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		042715A624AB3574000EA42A /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD17DCCE922817A55CA561A4 /* Pods-PinkRain.staging.xcconfig */;
+			buildSettings = {
+				APP_BUNDLE_ID = "$(APP_BUNDLE_ID)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				CODE_SIGN_ENTITLEMENTS = PinkRain/PinkRainStaging.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 5M2VJSXFXX;
+				INFOPLIST_FILE = PinkRain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.dlsolution.adhoc.pinkrain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc vn.dlsolution.adhoc.pinkrain";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Staging;
+		};
+		042715A724AB3574000EA42A /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D148FC679984D1649C898EB7 /* Pods-PinkRainTests.staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PinkRainTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.dlsolution.PinkRainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinkRain.app/PinkRain";
+			};
+			name = Staging;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0427157724AB3464000EA42A /* Build configuration list for PBXProject "PinkRain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0427159924AB3467000EA42A /* Debug */,
+				042715A524AB3574000EA42A /* Staging */,
+				0427159A24AB3467000EA42A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0427159B24AB3467000EA42A /* Build configuration list for PBXNativeTarget "PinkRain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0427159C24AB3467000EA42A /* Debug */,
+				042715A624AB3574000EA42A /* Staging */,
+				0427159D24AB3467000EA42A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0427159E24AB3467000EA42A /* Build configuration list for PBXNativeTarget "PinkRainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0427159F24AB3467000EA42A /* Debug */,
+				042715A724AB3574000EA42A /* Staging */,
+				042715A024AB3467000EA42A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0427157424AB3464000EA42A /* Project object */;
+}

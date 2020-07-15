@@ -1,0 +1,16 @@
+//
+//  Debug.xcconfig
+//  PinkRain
+//
+//  Created by Duy Linh on 6/30/20.
+//  Copyright © 2020 dlsolution. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = PinkRain-DEV
+APP_BUNDLE_ID = vn.dlsolution.dev.pinkrain
+APP_ICON = AppIcon-DEV
+
+BACKEND_URL = http:\/\/api.dlsolution.com/development

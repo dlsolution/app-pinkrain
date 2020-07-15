@@ -1,0 +1,199 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+require './Managers/Constants'
+require './Managers/BuildManager'
+require './Managers/CodeSigningManager'
+require './Managers/DistributionManager'
+require './Managers/VersionManager'
+
+build_manager = BuildManager.new(
+    fastlane: self,
+    workspace: Constants.WORKSPACE,
+    scheme_name_dev: Constants.SCHEME_NAME_DEV,
+    scheme_name_staging: Constants.SCHEME_NAME_STAGING,
+    scheme_name_production: Constants.SCHEME_NAME_PRODUCTION,
+    product_name_dev: Constants.PRODUCT_NAME_DEV,
+    product_name_staging: Constants.PRODUCT_NAME_STAGING,
+    product_name_production: Constants.PRODUCT_NAME_PRODUCTION,
+    configuration_dev: Constants.CONFIGURATION_DEV,
+    configuration_staging: Constants.CONFIGURATION_STAGING,
+    configuration_production: Constants.CONFIGURATION_PRODUCTION,
+    output_directory: Constants.OUTPUT_DIRECTORY,
+    xcodeproj: Constants.XCODEPROJ
+)
+
+code_signing_manager = CodeSigningManager.new(
+    fastlane: self,
+    keychain_name: Constants.KEYCHAIN_NAME,
+    keychain_password: Constants.KEYCHAIN_PASSWORD,
+    bundle_id_dev: Constants.BUNDLE_ID_DEV,
+    bundle_id_staging: Constants.BUNDLE_ID_STAGING,
+    bundle_id_production: Constants.BUNDLE_ID_PRODUCTION,
+    dev_portal_apple_id: Constants.DEV_PORTAL_APPLE_ID,
+    dev_portal_team_id: Constants.DEV_PORTAL_TEAM_ID
+)
+
+distribution_manager = DistributionManager.new(
+    fastlane: self,
+    firebase_cli_path: Constants.FIREBASE_CLI_PATH
+)
+
+version_manager = VersionManager.new(
+    fastlane: self,
+    xcodeproj: Constants.XCODEPROJ,
+    main_target_name: Constants.TARGET_FILTER
+)
+
+default_platform(:ios)
+
+### Sync Code Sign Stage for Local ###
+platform :ios do
+    desc 'create or update certificate and provisioning profile - All'
+    lane :code_signing do |options|
+        code_signing_manager.sync_code_sign(
+            update_development: options.fetch(:update_development, false),
+            update_adhoc: options.fetch(:update_adhoc, false),
+            update_appstore: options.fetch(:update_appstore, false)
+        )
+    end
+end
+
+### Sync Code Sign Stage for CI ###
+platform :ios do
+    desc 'create or update certificate and provisioning profile - Dev'
+    private_lane :code_signing_dev do |options|
+        code_signing_manager.sync_code_sign_dev(
+            update_development: options.fetch(:update_development, false)
+        )
+    end
+
+    desc 'create or update certificate and provisioning profile - Staging'
+    private_lane :code_signing_staging do |options|
+        code_signing_manager.sync_code_sign_staging(
+            update_adhoc: options.fetch(:update_adhoc, false)
+        )
+    end
+
+    desc 'create or update certificate and provisioning profile - Appstore'
+    private_lane :code_signing_appstore do |options|
+        code_signing_manager.sync_code_sign_appstore(
+            update_appstore: options.fetch(:update_appstore, false)
+        )
+    end
+end
+
+### Build ipa ###
+platform :ios do
+    desc 'build develop'
+    lane :build_develop do
+        build_manager.build_develop
+    end
+
+    desc 'build staging'
+    lane :build_staging do
+        build_manager.build_staging
+    end
+
+    desc 'build appstore'
+    lane :build_appstore do
+        build_manager.build_appstore
+    end
+end
+
+### Deploy Stage ###
+platform :ios do
+    desc 'upload develop build to Firebase App Distribution - Tester Groups'
+    private_lane :upload_develop_build_to_firebase do
+        distribution_manager.upload_to_firebase(
+            groups: Constants.FIREBASE_TESTER_GROUPS,
+            release_notes_file: Constants.PATH_RELEASE_NOTES_DEV,
+            firebase_app_id: Constants.FIREBASE_APP_ID_DEV
+        )
+    end
+
+    desc 'upload staging build to Firebase App Distribution - Client Groups'
+    private_lane :upload_staging_build_to_firebase do
+        distribution_manager.upload_to_firebase(
+            groups: Constants.FIREBASE_CLIENT_GROUPS,
+            release_notes_file: Constants.PATH_RELEASE_NOTES_STAGING,
+            firebase_app_id: Constants.FIREBASE_APP_ID_STAGING
+        )
+    end
+end
+
+### Notify to Slack channel ###
+platform :ios do
+    desc "Notify to slack channel - Dev"
+    private_lane :notify_to_slack_dev do
+        slack(
+            message: "🎉 PinkRain-Dev successfully uploaded to Firebase App Distribution.",
+            payload: {
+                "🗓 Build Date" => Time.new.strftime("%Y/%m/%d %T"),
+                "🔔 Build Number" => version_manager.build_number,
+                "💡 Version" => "v#{version_manager.version_number}"
+              },
+            slack_url: Constants.SLACK_URL
+        )
+    end
+
+    desc "Notify to slack channel - Staging"
+    private_lane :notify_to_slack_staging do
+        slack(
+            message: "🎉 PinkRain-Staging successfully uploaded to Firebase App Distribution.",
+            payload: {
+                "🗓 Build Date" => Time.new.strftime("%Y/%m/%d %T"),
+                "🔔 Build Number" => version_manager.build_number,
+                "💡 Version" => "v#{version_manager.version_number}"
+              },
+            slack_url: Constants.SLACK_URL
+        )
+    end
+end
+
+### Utils ###
+platform :ios do
+    desc "remove keychain"
+    private_lane :remove_keychain do
+        code_signing_manager.remove_keychain
+    end
+end
+
+### Build and Deploy ###
+platform :ios do
+    desc "build Develop & deploy to firebase app distribution"
+    lane :release_dev do
+        code_signing_dev
+        build_develop
+        upload_develop_build_to_firebase
+        notify_to_slack_dev
+        remove_keychain
+    end
+
+    desc 'build STAGING & deploy to Firebase App Distribution'
+    lane :release_staging do
+        code_signing_staging
+        build_staging
+        upload_staging_build_to_firebase
+        notify_to_slack_staging
+        remove_keychain
+    end
+
+    desc "build RELEASE for AppStore"
+    lane :release_appstore do
+        code_signing_appstore
+        build_appstore
+    end
+end

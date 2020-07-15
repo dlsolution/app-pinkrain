@@ -1,0 +1,23 @@
+#!/bin/bash
+if [ "$TRAVIS_PULL_REQUEST" == "false" ] 
+then 
+    echo $TRAVIS_BRANCH;
+    if [ "$TRAVIS_BRANCH" == "develop" ] 
+    then
+        echo "********** BUILD DEV **********"
+        bundle exec fastlane release_dev
+    elif [ "$TRAVIS_BRANCH" == "master" ] 
+    then
+        echo "********** BUILD STAGING **********"
+        bundle exec fastlane release_staging
+    elif [[ "$TRAVIS_BRANCH" == "release"* ]] 
+    then
+        echo "********** BUILD RELEASE **********"
+        bundle exec fastlane release_appstore
+    else
+        echo "NOTHING"
+    fi
+else 
+    echo "This is a pull request. No deployment will be done."
+    exit 0
+fi

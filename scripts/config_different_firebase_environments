@@ -1,0 +1,48 @@
+# Name of the resource to copy
+INFO_PLIST_FILE=GoogleService-Info.plist
+ 
+# Get references to debug and release versions of the plist file
+DEBUG_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${INFO_PLIST_FILE}
+ADHOC_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Adhoc/${INFO_PLIST_FILE}
+RELEASE_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Prod/${INFO_PLIST_FILE}
+ 
+# Make sure the debug version exists
+echo "Looking for ${INFO_PLIST_FILE} in ${DEBUG_INFO_PLIST_FILE}"
+if [ ! -f $DEBUG_INFO_PLIST_FILE ] ; then
+    echo "File GoogleService-Info.plist (debug) not found."
+    exit 1
+fi
+
+# Make sure the adhoc version exists
+echo "Looking for ${INFO_PLIST_FILE} in ${ADHOC_INFO_PLIST_FILE}"
+if [ ! -f $ADHOC_INFO_PLIST_FILE ] ; then
+    echo "File GoogleService-Info.plist (adhoc) not found."
+    exit 1
+fi
+ 
+# Make sure the release version exists
+echo "Looking for ${INFO_PLIST_FILE} in ${RELEASE_INFO_PLIST_FILE}"
+if [ ! -f $RELEASE_INFO_PLIST_FILE ] ; then
+    echo "File GoogleService-Info.plist (release) not found."
+    exit 1
+fi
+ 
+# Get a reference to the destination location for the plist file
+PLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app
+echo "Copying ${INFO_PLIST_FILE} to final destination: ${PLIST_DESTINATION}"
+
+if [ "${CONFIGURATION}" == "Debug" ]
+then
+    echo "File ${DEBUG_INFO_PLIST_FILE} copied"
+    cp "${DEBUG_INFO_PLIST_FILE}" "${PLIST_DESTINATION}"
+elif [ "${CONFIGURATION}" == "Staging" ]
+then
+    echo "File ${ADHOC_INFO_PLIST_FILE} copied"
+    cp "${ADHOC_INFO_PLIST_FILE}" "${PLIST_DESTINATION}"
+elif [ "${CONFIGURATION}" == "Release" ]
+then
+    echo "File ${RELEASE_INFO_PLIST_FILE} copied"
+    cp "${RELEASE_INFO_PLIST_FILE}" "${PLIST_DESTINATION}"
+else
+    echo "NOTHING"
+fi
